@@ -1,0 +1,203 @@
+@font-face {
+  font-family: 'Circular';
+  src: url("fonts/Circular-Bold.woff2") format("woff2"), url("fonts/Circular-Bold.woff") format("woff"), url("fonts/Circular-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Circular';
+  src: url("fonts/Circular-Book.woff2") format("woff2"), url("fonts/Circular-Book.woff") format("woff"), url("fonts/Circular-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+  @font-face {
+    font-family: GoodTimes;
+    src: url("fonts/GOODTIME.ttf");}
+
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+body {
+  font-family: 'Circular', sans-serif;
+  font-weight: normal;
+  overflow: hidden;
+  height: 100%; }
+
+.pmoney {
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  text-align:center;
+  color: white;
+  font-family: 'GoodTimes', sans-serif; 
+  font-size: 17.5px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.pmoney .symbol{
+  content: url('https://img.icons8.com/cotton/2x/wallet--v1.png');
+  width: 20px;
+  height: 20px;
+  margin-right: 0.25vw;
+}
+.bmoney {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  text-align:center;
+  color: white;
+  font-family: 'GoodTimes', sans-serif; 
+  font-size: 17.5px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.bmoney .symbol{
+  content: url('https://imgur.com/lxZlhAc.png');
+  width: 20px;
+  height: 20px;
+  margin-right: 0.25vw;
+  margin-top: 0.25vw;
+}
+.aurmoney {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  text-align:center;
+  color: white;
+  font-family: 'GoodTimes', sans-serif; 
+  font-size: 17.5px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.aurmoney .symbol{
+  content: url('https://image.flaticon.com/icons/png/512/825/825540.png');
+  width: 20px;
+  height: 20px;
+  margin-right: 0.25vw;
+}
+.giftmoney {
+  position: absolute;
+  top: 70%;
+  left: 65%;
+  text-align:center;
+  color: white;
+  font-family: 'GoodTimes', sans-serif; 
+  font-size: 17.5px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.giftmoney .symbol{
+  content: url('https://www.cutiuta-cu-povesti.ro/wp-content/uploads/2018/02/gift-icon.png');
+  width: 20px;
+  height: 20px;
+  margin-right: 0.25vw;
+  margin-top: 0.25vw;
+}
+
+.clock {
+  position: absolute;
+  top: 0;
+  left: -110px;
+  font-family: 'GoodTimes', sans-serif;  
+  font-weight: normal;
+  overflow: hidden;
+  border-radius: 100%;
+  background-image: url('assets/logo.png');
+  background-position: center;
+  background-size: 122.5% 115%;
+  background-repeat: no-repeat;
+  border: 2.5px solid white;
+  width: 115px;
+  height: 115px;
+  z-index: 7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hud {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  width: 230px; }
+  .hud .profile {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    overflow: hidden; }
+  .hud .container {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 300px;
+    height: 110px;
+    padding: 2px 20px 15px 60px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0.75));
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+    .hud .container .type {
+      width: 177.5px;
+      height: 12px;
+      margin-left: 15%;
+      margin-top: 2.5%;}
+      .hud .container .type .svg {
+        display: inline-block;
+        vertical-align: middle;
+        width: 14px;
+        text-align: center; }
+      .hud .container .type .progress {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: -20px;
+        width: 100%;
+        height: 7px;
+        background-color: rgba(200, 200, 200, 0.3);
+        border-radius: 10px; }
+        .hud .container .type .progress div {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(0,215,255);
+          border-radius: 10px; }
+          
+          .hud .container .type .progress .progress-hunger{
+            background-color: rgb(255,100,0);
+          }
+  .hud #hour {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    width: 170px;
+    right: 0;
+    top: -15px; }
+  .hud .notification {
+    display: none;
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    line-height: 21px;
+    background-color: #EE5253;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    z-index: 2;
+    border-radius: 100%;
+    top: -7px;
+    left: 0; }
+  .hud .icons {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: -16px; }
